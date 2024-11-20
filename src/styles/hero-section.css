@@ -1,0 +1,163 @@
+@import url('./fonts.css');
+
+:root {
+  --text: #181C14;
+  --background: #EBE3D5;
+}
+
+*,
+*::after,
+*::before,
+h1,
+h2,
+h3 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--background);
+}
+
+header {
+  display: grid;
+  grid-template-rows: 50px 1fr;  
+  max-height: 350px;
+}
+
+nav {
+  display: flex;
+  justify-content: end;
+}
+
+nav>.background {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+  height: 100%;
+  padding: 0 50px 0 50px;
+  background-color: black;
+}
+
+nav .nav-item {
+  background-color: transparent;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--background);
+}
+
+.salutation {
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.salutation>h1 {  
+  font-size: 16rem;
+}
+
+.presentation {  
+  height: 210px;
+  margin-bottom: 100px;
+}
+
+.presentation-text {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 450px);
+  align-items: end;
+  height: 100%;
+  padding-left: 100px;
+}
+
+.presentation-text__headings .my-name {
+  font-size: 6rem;
+}
+
+.presentation-text__headings .my-ocupation {
+  font-size: 2.5rem;
+}
+
+.presentation-text__bios .my-bios {
+  font-size: 2.25rem;
+}
+
+@media (max-width: 1200px) {
+  .salutation,
+  .presentation-text {
+    padding-left: 20px;
+  }
+
+  .salutation>h1 {
+    font-size: 10rem;
+  }
+
+  .presentation-text__headings .my-name {
+    font-size: 4.5rem;
+  }
+  
+  .presentation-text__headings .my-ocupation {
+    font-size: 2rem;
+  }
+
+  .presentation-text__bios {
+    padding: 0 75px 0 0;
+  }
+  
+  .presentation-text__bios .my-bios {
+    font-size: 1.5rem;
+  }
+} 
+
+@media (max-width: 850px) {
+  nav>.background {
+    width: 250px;
+  }
+
+  .presentation-text {    
+    grid-template-columns: 1fr minmax(auto, 250px);
+  }
+
+  .presentation-text__bios .my-bios {
+    font-size: 1rem;
+  }
+
+  .presentation-text__headings .my-name {
+    font-size: 3rem;
+  }
+  
+  .presentation-text__headings .my-ocupation {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 650px) {
+  header {
+    row-gap: 100px;
+  }
+
+  nav>.background {
+    width: 100%;
+  }
+
+  .presentation-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;    
+    padding: 0 20px;
+  }
+
+  .presentation-text__bios {
+    width: 50%;
+    padding: 0;
+  }
+}
+
+@media (max-height: 700px) {
+  .presentation {
+    margin-bottom: 50px;
+  }
+}
