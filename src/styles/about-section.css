@@ -49,11 +49,11 @@
 }
 
 .bios__headings h2 {
-  font-size: 4.5rem;
+  font-size: 8rem;
 }
 
 .bios__headings h3 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .bios__content {
@@ -63,7 +63,8 @@
 }
 
 .bios__content>p {
-  font-size: 1.25rem;
+  font-size: 1rem;  
+  text-transform: uppercase;  
 }
 
 .bios__content>.technologies img {
@@ -71,21 +72,21 @@
 }
 
 @media (max-width: 1200px) {
+  .scroll {    
+    padding-bottom: 20px;
+  }
+
   .bios {    
-    padding: 120px 0 100px 50px;
+    padding: 100px 20px 100px 20px;
   }
 
   .bios__headings h2 {
-    font-size: 3.5rem;
+    font-size: 6rem;
   }
   
   .bios__headings h3 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
-  
-  .bios__content>p {
-    font-size: 1rem;
-  }  
 }
 
 @media (max-width: 1024px) {
@@ -112,7 +113,7 @@
   .scroll {
     position: absolute;
     top: 280px;
-    right: 50px;
+    right: 20px;
     width: auto;
     height: auto;
     padding: 0;
@@ -146,11 +147,11 @@
   }
 
   .bios__content>.technologies>img {
-    height: 14px;
+    height: 20px;
   }
 }
 
-@media (max-height: 700px) {
+@media (max-height: 750px), (max-width: 450px) {
   .about {
     height: calc(100svh + (100vh - 560px));
   }  
@@ -168,11 +169,23 @@
     border-top-left-radius: 0;
   }
 
+  .bios__headings h2 {
+    font-size: 4rem;
+  }
+  
+  .bios__headings h3 {
+    font-size: 1.5rem;
+  }
+
   .scroll {
     top: -100%;
   }
 
   .bios__content>.technologies {
     padding-right: 0;
+  }
+
+  .bios__content>.technologies>img {
+    height: 14px;
   }
 }

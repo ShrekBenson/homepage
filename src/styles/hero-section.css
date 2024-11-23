@@ -80,8 +80,12 @@ nav .nav-item {
   font-size: 2.5rem;
 }
 
+.presentation-text__bios {
+  padding-right: 50px;
+}
+
 .presentation-text__bios .my-bios {
-  font-size: 2.25rem;
+  font-size: 2.25rem;  
 }
 
 @media (max-width: 1200px) {
