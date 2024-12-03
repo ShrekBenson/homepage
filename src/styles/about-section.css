@@ -3,7 +3,6 @@
   grid-template-columns: minmax(auto, 1200px) auto minmax(450px, 1fr);
   height: calc(100svh + (100vh - 660px));  
   padding: 0 20px;
-  overflow-x: hidden;
 }
 
 .photo-container {
@@ -12,8 +11,7 @@
   background-image: url('../assets/img/og.webp');
   background-size: cover;
   background-position: center;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 10px;
 }
 
 .photo-container img {  
@@ -64,7 +62,6 @@
 
 .bios__content>p {
   font-size: 1rem;  
-  text-transform: uppercase;  
 }
 
 .bios__content>.technologies img {
@@ -151,22 +148,26 @@
   }
 }
 
-@media (max-height: 750px), (max-width: 450px) {
+@media (max-height: 800px), (max-width: 450px) {
   .about {
     height: calc(100svh + (100vh - 560px));
-  }  
+  }
 
   .photo-container {
     background-image: none;
-    background-color: var(--text);
-    border-top-left-radius: 0;
+    background-color: var(--text);    
   }
 
-  .bios {    
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bios {
     height: 100%;
     padding: 5%;
-    justify-content: center;    
-    border-top-left-radius: 0;
+    justify-content: center;
+    border-radius: 0;
   }
 
   .bios__headings h2 {
@@ -178,7 +179,7 @@
   }
 
   .scroll {
-    top: -100%;
+    display: none;
   }
 
   .bios__content>.technologies {
@@ -186,6 +187,12 @@
   }
 
   .bios__content>.technologies>img {
-    height: 14px;
+    height: 16px;
+  }
+}
+
+@media (max-height: 800px) and (min-width: 1025px) {
+  .photo-container {    
+    background-image: url('../assets/img/medium.webp');
   }
 }

@@ -42,6 +42,15 @@ nav>.background {
   background-color: black;
 }
 
+nav>.background button {
+  cursor: pointer;
+}
+
+nav>.background a {
+  text-decoration: none;
+  color: var(--background);
+}
+
 nav .nav-item {
   background-color: transparent;
   border: none;
@@ -49,9 +58,7 @@ nav .nav-item {
   color: var(--background);
 }
 
-.salutation {
-  display: flex;
-  align-items: center;
+.salutation {  
   padding: 0 100px;
 }
 
@@ -61,7 +68,7 @@ nav .nav-item {
 
 .presentation {  
   height: 210px;
-  margin-bottom: 100px;
+  margin-bottom: 100px;  
 }
 
 .presentation-text {
@@ -160,7 +167,7 @@ nav .nav-item {
   }
 }
 
-@media (max-height: 700px) {
+@media (max-height: 700px) and (max-width: 1024px) {
   .presentation {
     margin-bottom: 50px;
   }
